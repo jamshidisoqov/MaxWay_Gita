@@ -20,8 +20,6 @@ import cafe.adriel.voyager.androidx.AndroidScreen
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.PagerState
-import uz.gita.maxway_gita.presentation.screens.basket.BasketScreen
-import uz.gita.maxway_gita.presentation.screens.basket.BasketScreenContent
 import uz.gita.maxway_gita.presentation.theme.MaxWayGitaTheme
 
 // Created by Jamshid Isoqov an 9/24/2022
@@ -84,9 +82,9 @@ fun TabLayout() {
 fun TabsContent(pagerState: PagerState) {
     HorizontalPager(state = pagerState) { page ->
         when (page) {
-            0 -> BasketScreen()
-            1 -> BasketScreen()
-            2 -> BasketScreen()
+            // 0 ->
+            // 1 ->
+            // 2 ->
         }
     }
 }
