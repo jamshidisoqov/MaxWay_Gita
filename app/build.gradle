@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "uz.gita.maxway_gita"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -75,8 +75,7 @@ dependencies {
     implementation("org.orbit-mvi:orbit-compose:4.3.2")
     implementation("org.orbit-mvi:orbit-viewmodel:4.3.2")
 
-    //room
-    //room
+    //Room
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
