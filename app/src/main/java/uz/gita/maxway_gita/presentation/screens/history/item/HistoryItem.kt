@@ -1,5 +1,6 @@
 package uz.gita.maxway_gita.presentation.screens.history.item
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,7 +31,8 @@ fun HistoryItem(
         Surface(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(10.dp, 5.dp), shape = RoundedCornerShape(10)
+                .padding(10.dp, 5.dp),
+            shape = RoundedCornerShape(10)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
