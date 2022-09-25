@@ -14,7 +14,8 @@ data class OrderData(
     val isDelivery: Boolean,
     val status: Int = 1,
     val address: GeoPoint? = null,
-    val comment: String? = null
+    val comment: String? = null,
+    val clientId: String
 ) {
     fun toOrderEntity(): OrderEntity {
         val gson = Gson()
@@ -28,7 +29,8 @@ data class OrderData(
             isDelivery = isDelivery,
             status = status,
             address = address,
-            comment = comment
+            comment = comment,
+            clientId = clientId
         )
     }
 }

@@ -33,9 +33,21 @@ object Mapper {
         imageUrl = this["img_url"].toString()
     )
 
-    fun DocumentSnapshot.toaCategoryData() = CategoryData(
+    fun DocumentSnapshot.toCategoryData() = CategoryData(
         id = this.id,
         name = this["name"].toString()
+    )
+
+    fun DocumentSnapshot.toOrderEntity() = OrderEntity(
+        id = this.id,
+        productOrder = this["productOrder"].toString(),
+        orderName = this["orderName"].toString(),
+        allOrderValue = this["allOrderValue"].toString().toLong(),
+        isDelivery = this["isDelivery"].toString().toBoolean(),
+        clientId = this["clientId"].toString(),
+        status = this["status"].toString().toInt(),
+        address = this["address"] as GeoPoint,
+        comment = this["comment"].toString()
     )
 }
 

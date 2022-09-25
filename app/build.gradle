@@ -51,7 +51,6 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-firestore:24.3.1'
     def room_version = "2.4.3"
 
     implementation 'androidx.core:core-ktx:1.9.0'
@@ -60,16 +59,23 @@ dependencies {
     implementation 'androidx.compose.ui:ui-tooling:1.2.1'
     implementation 'androidx.compose.foundation:foundation:1.2.1'
     implementation 'androidx.activity:activity-compose:1.5.1'
-
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     testImplementation 'junit:junit:4.13.2'
 
+    //fireStore
+    implementation 'com.google.firebase:firebase-firestore:24.3.1'
+    implementation 'com.google.firebase:firebase-common-ktx:20.1.2'
+    implementation platform('com.google.firebase:firebase-bom:30.3.2')
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    //voyager
     var voyagerVersion = "1.0.0-rc02"
     implementation "cafe.adriel.voyager:voyager-navigator:$voyagerVersion"
     implementation "cafe.adriel.voyager:voyager-hilt:$voyagerVersion"
     implementation "cafe.adriel.voyager:voyager-androidx:$voyagerVersion"
     implementation "cafe.adriel.voyager:voyager-transitions:$voyagerVersion"
 
+    //dagger hilt
     implementation "com.google.dagger:hilt-android:2.42"
     kapt "com.google.dagger:hilt-compiler:2.42"
 
@@ -89,7 +95,7 @@ dependencies {
     // Tab layout
     implementation "com.google.accompanist:accompanist-pager:0.13.0"
 
-
+    //gson
     implementation "com.google.code.gson:gson:2.9.1"
 
     //MVI orbit
