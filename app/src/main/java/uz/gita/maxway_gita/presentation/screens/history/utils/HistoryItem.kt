@@ -1,9 +1,6 @@
 package uz.gita.maxway_gita.presentation.screens.history.utils
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
@@ -63,8 +60,9 @@ fun HistoryItem(
                 Column(modifier = Modifier.weight(1f)) {
                     Icon(
                         tint = Color(0xFF818C99),
-                        painter = painterResource(id = R.drawable.delete),
-                        contentDescription = null
+                        painter = painterResource(id = R.drawable.arrow_forward),
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
                     )
                 }
             }

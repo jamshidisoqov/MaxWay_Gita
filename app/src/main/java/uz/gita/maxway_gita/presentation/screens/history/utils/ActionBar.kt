@@ -60,7 +60,7 @@ fun MyActionBarWithDelete() {
                 Icon(
                     painter = painterResource(id = R.drawable.arrow_back),
                     contentDescription = null,
-                    Modifier.size(18.dp)
+                    modifier = Modifier.size(18.dp)
                 )
             }
         },
@@ -69,7 +69,7 @@ fun MyActionBarWithDelete() {
                 Icon(
                     painter = painterResource(id = R.drawable.delete),
                     contentDescription = null,
-                    Modifier.size(20.dp)
+                    modifier = Modifier.size(20.dp)
                 )
             }
         }
