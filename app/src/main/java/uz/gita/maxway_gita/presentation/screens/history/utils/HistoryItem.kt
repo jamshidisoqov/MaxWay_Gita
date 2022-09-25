@@ -1,6 +1,5 @@
-package uz.gita.maxway_gita.presentation.screens.history.item
+package uz.gita.maxway_gita.presentation.screens.history.utils
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -64,7 +63,7 @@ fun HistoryItem(
                 Column(modifier = Modifier.weight(1f)) {
                     Icon(
                         tint = Color(0xFF818C99),
-                        painter = painterResource(id = R.drawable.ic_round_keyboard_arrow_right_24),
+                        painter = painterResource(id = R.drawable.delete),
                         contentDescription = null
                     )
                 }
