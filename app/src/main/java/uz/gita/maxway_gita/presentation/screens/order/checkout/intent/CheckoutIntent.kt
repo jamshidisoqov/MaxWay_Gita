@@ -1,5 +1,9 @@
 package uz.gita.maxway_gita.presentation.screens.order.checkout.intent
 
-// Created by Jamshid Isoqov an 9/24/2022
-class CheckoutIntent {
+
+// Yusupov Bekzod
+sealed interface CheckoutIntent {
+    object deliveryMethod : CheckoutIntent
+    object DeliveryAddress : CheckoutIntent
+    class CheckoutOrder(orderId: Int) : CheckoutIntent
 }
