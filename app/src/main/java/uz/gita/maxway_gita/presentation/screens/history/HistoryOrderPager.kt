@@ -15,7 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.androidx.AndroidScreen
-import uz.gita.maxway_gita.presentation.screens.history.item.HistoryItem
+import uz.gita.maxway_gita.presentation.screens.history.utils.HistoryItem
 import uz.gita.maxway_gita.presentation.theme.MaxWayGitaTheme
 
 class HistoryOrderPager : AndroidScreen() {

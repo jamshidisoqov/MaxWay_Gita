@@ -6,4 +6,5 @@ sealed interface CheckoutIntent {
     object deliveryMethod : CheckoutIntent
     object DeliveryAddress : CheckoutIntent
     class CheckoutOrder(orderId: Int) : CheckoutIntent
+    object back : CheckoutIntent
 }

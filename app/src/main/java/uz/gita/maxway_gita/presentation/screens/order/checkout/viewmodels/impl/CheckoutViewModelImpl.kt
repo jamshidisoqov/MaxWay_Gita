@@ -21,6 +21,7 @@ class CheckoutViewModelImpl @Inject constructor() : CheckoutViewModel, ViewModel
 //            is CheckoutIntent.deliveryMethod -> reduce { /*logic from useCase!*/ }
 //            is CheckoutIntent.DeliveryAddress -> reduce { }
 //            is CheckoutIntent.CheckoutOrder -> reduce { }
+//            is CheckoutIntent.back -> direction.navigateToSecond()
 //        }
     }
 }
