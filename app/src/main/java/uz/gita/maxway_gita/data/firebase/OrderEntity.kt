@@ -1,14 +1,15 @@
-package uz.gita.maxway_gita.data.local.order
+package uz.gita.maxway_gita.data.firebase
 
 import com.google.firebase.firestore.GeoPoint
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import uz.gita.maxway_gita.data.firebase.OrderEntity
-import java.util.*
+import uz.gita.maxway_gita.data.local.order.OrderData
+import uz.gita.maxway_gita.data.local.order.ProductOrder
 
-data class OrderData(
-    val id: String = UUID.randomUUID().toString(),
-    val productOrder: List<ProductOrder>,
+// Created by Jamshid Isoqov an 9/25/2022
+data class OrderEntity(
+    val id: String,
+    val productOrder: String,
     val orderName: String,
     val allOrderValue: Long,
     val isDelivery: Boolean,
@@ -16,11 +17,11 @@ data class OrderData(
     val address: GeoPoint? = null,
     val comment: String? = null
 ) {
-    fun toOrderEntity(): OrderEntity {
+    fun toOrderData(): OrderData {
         val gson = Gson()
         val type = object : TypeToken<List<ProductOrder>>() {}.type
-        val order = gson.toJson(productOrder, type)
-        return OrderEntity(
+        val order = gson.fromJson<List<ProductOrder>>(productOrder, type)
+        return OrderData(
             id = id,
             productOrder = order,
             orderName = orderName,
